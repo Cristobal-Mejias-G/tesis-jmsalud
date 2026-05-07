@@ -16,7 +16,6 @@ Este repositorio contiene el código, datos procesados y documentos asociados a 
 
 La investigación analiza la evolución de las preferencias por la justicia de mercado en la atención de salud en Chile entre 1999 y 2019, examinando el rol de la percepción de meritocracia, la percepción de desigualdad y la posición socioeconómica como factores explicativos. Los datos provienen de las olas chilenas del **International Social Survey Programme (ISSP)** de 1999, 2009 y 2019.
 
----
 
 ## Estructura del repositorio
 
