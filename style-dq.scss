@@ -1,0 +1,191 @@
+/*-- scss:defaults --*/
+
+/* ── Tipografía ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap');
+
+$font-family-base:    "Source Sans 3", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:   "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$headings-font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace: "Source Code Pro", "Courier New", monospace !default;
+
+$font-size-base:   1.0rem !default;
+$line-height-base: 1.75   !default;
+
+/* ── Paleta ISSP ────────────────────────────────────────── */
+/*  Azul institucional  #1a3a5c  (navbar, headings)          */
+/*  Azul medio          #2c5f8a  (links, accents)            */
+/*  Azul claro          #4a7fa5  (hover, code bg)            */
+/*  Gris texto          #2d2d2d                              */
+/*  Fondo               #fafafa                              */
+/*  Borde sutil         #dde3ea                              */
+
+$body-bg:           #fafafa  !default;
+$body-color:        #2d2d2d  !default;
+$link-color:        #2c5f8a  !default;
+$link-hover-color:  #1a3a5c  !default;
+
+$headings-color:    #1a3a5c  !default;
+$headings-font-weight: 600   !default;
+
+$h1-font-size: 1.75rem !default;
+$h2-font-size: 1.40rem !default;
+$h3-font-size: 1.15rem !default;
+$h4-font-size: 1.00rem !default;
+
+$code-color:        #1a3a5c  !default;
+$code-bg:           #eef2f7  !default;
+
+$border-color:      #dde3ea  !default;
+
+/* Tabla de contenidos */
+$toc-color:         #2c5f8a  !default;
+$toc-active-color:  #1a3a5c  !default;
+$toc-font-size:     0.88rem  !default;
+
+
+/*-- scss:rules --*/
+
+/* ── Cuerpo principal ───────────────────────────────────── */
+body {
+  font-family: $font-family-base;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Texto corrido en serif para mejor lectura académica */
+p, li, blockquote {
+  font-family: $font-family-serif;
+  font-size: 1.0rem;
+  line-height: 1.85;
+  color: #2d2d2d;
+}
+
+/* ── Encabezados ────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  color: $headings-color;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+h1 { border-bottom: 2px solid #1a3a5c; padding-bottom: 0.35rem; }
+h2 { border-bottom: 1px solid #dde3ea; padding-bottom: 0.2rem;  }
+
+/* ── Título del documento ───────────────────────────────── */
+#title-block-header {
+  border-bottom: 3px solid #1a3a5c;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.title     { color: #1a3a5c; font-weight: 600; }
+.subtitle  { color: #4a7fa5; font-size: 1.05rem; font-family: $font-family-base; }
+.author,
+.date      { color: #555;    font-size: 0.92rem; font-family: $font-family-base; }
+
+/* ── Tabla de contenidos ────────────────────────────────── */
+#TOC {
+  border-left: 3px solid #2c5f8a;
+  padding-left: 1rem;
+  font-family: $font-family-base;
+  font-size: 0.88rem;
+
+  a {
+    color: #2c5f8a;
+    text-decoration: none;
+    &:hover { color: #1a3a5c; text-decoration: underline; }
+  }
+
+  .active { color: #1a3a5c; font-weight: 600; }
+}
+
+/* ── Tablas ─────────────────────────────────────────────── */
+table {
+  font-family: $font-family-base;
+  font-size: 0.93rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+thead tr {
+  background-color: #1a3a5c;
+  color: #fff;
+}
+
+thead th {
+  padding: 0.55rem 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+tbody tr:nth-child(even) { background-color: #f0f4f8; }
+tbody tr:hover           { background-color: #e4edf5; }
+
+td, th {
+  padding: 0.45rem 0.8rem;
+  border-bottom: 1px solid #dde3ea;
+  vertical-align: top;
+}
+
+/* ── Bloques de código ──────────────────────────────────── */
+code {
+  background-color: #eef2f7;
+  color: #1a3a5c;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+pre {
+  background-color: #f4f7fb;
+  border-left: 3px solid #4a7fa5;
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  font-size: 0.87rem;
+  overflow-x: auto;
+}
+
+/* ── Citas / blockquote ─────────────────────────────────── */
+blockquote {
+  border-left: 3px solid #4a7fa5;
+  padding-left: 1rem;
+  color: #4a5568;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+/* ── Links ──────────────────────────────────────────────── */
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover { color: $link-hover-color; text-decoration: underline; }
+}
+
+/* ── Figuras y pies ─────────────────────────────────────── */
+.figure-caption, figcaption {
+  font-family: $font-family-base;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+/* ── Callouts / notas ───────────────────────────────────── */
+.callout {
+  border-left: 4px solid #2c5f8a;
+  background-color: #f0f4f8;
+  border-radius: 4px;
+}
+
+/* ── Ancho del contenido ────────────────────────────────── */
+.content-container, #quarto-document-content {
+  max-width: 780px;
+}
