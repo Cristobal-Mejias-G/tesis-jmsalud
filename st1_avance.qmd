@@ -1,0 +1,1155 @@
+---
+title: "Informe de Avance: Market Justice in Health Care: A 30-Year Study in Chile"
+subtitle: "Seminario de Título 1: Entrega parcial <br> Profesor guía: Juan Carlos Castillo"
+author: "Cristóbal Mejías"
+date: 2026-05-15
+lang: es
+format:
+  html:
+    theme: [litera, style-dq.scss]
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenidos"
+    toc-location: left
+    number-sections: true
+    smooth-scroll: true
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+  output: false
+include-in-header:
+  text: |
+    <style>p { text-align: justify; }</style>
+bibliography: thesis-mj-health-cl.bib
+
+---
+
+# Informe de Avance: Market Justice in Health Care: A 30-Year Study in Chile
+
+## Abstract
+
+Las creencias sobre justicia distributiva son fundamentales para la legitimidad de los arreglos sociales. En Chile, el sistema de salud se estructuró bajo un modelo de mercado donde el acceso depende de la capacidad de pago individual, generando una desigualdad estructural que ha tensionado la cohesión social. A pesar de su relevancia, existe un vacío en el estudio longitudinal sobre cómo ha evolucionado la aceptación ciudadana de esta mercantilización.
+
+Esta investigación analiza la evolución de la "justicia de mercado" en salud en Chile entre 1999 y 2019, evaluando el impacto de la percepción de privilegio, el criterio de necesidad, la brecha salarial percibida y la posición socioeconómica. Utilizando datos de tres olas del International Social Survey Programme (ISSP) (1999, 2009 y 2019), se emplean modelos de regresión logística para identificar los determinantes del apoyo a la desigualdad sanitaria. El estudio busca determinar si la legitimidad del mercado ha declinado ante una mayor conciencia de las brechas estructurales o si persiste mediante la naturalización de las barreras de acceso.
+
+## Introducción
+
+El sistema de salud chileno experimentó una transformación estructural radical durante la dictadura cívico-militar (1973-1989), estableciendo un modelo de corte neoliberal que privatizó y mercantilizó el acceso a los servicios de bienestar (@bastiasgabriel_chilean_2023; @castillo_perceptions_2025; @llambias-wolff_political_2019; @madariaga_three_2020). Este cambio de paradigma reemplazó el principio de acceso basado en la necesidad por uno determinado estrictamente por la capacidad de pago individual, dando origen a un sistema segmentado y fragmentado que dividió la provisión entre alternativas privadas excluyentes para los sectores de mayores ingresos y un sector público restrictivo para las clases de menores recursos (@bastiasgabriel_chilean_2023; @castillo_perceptions_2025; @llambias-wolff_political_2019). A pesar del retorno a la democracia, los gobiernos de la coalición de centro-izquierda mantuvieron intactos los cimientos de este modelo de mercado, constreñidos por el diseño institucional heredado y la presión de los grupos de interés empresariales, limitándose a implementar reformas progresivas pero no estructurales (@llambias-wolff_political_2019; @madariaga_three_2020). A lo largo de tres décadas, la persistencia de esta desigualdad estructural operó como un catalizador de conflicto social, cuyo punto de inflexión insoslayable se materializó en el estallido social de octubre de 2019, impulsado por el rechazo popular a la precariedad del bienestar y a la alta dependencia del gasto de bolsillo (@castillo_justification_2026). En este contexto, el estudio de los últimos treinta años —y en particular del período 1999-2019— resulta fundamental para analizar cómo ha evolucionado la legitimidad y la justificación ciudadana respecto a la mercantilización de la salud en un entorno de marcadas disparidades socioeconómicas.
+
+**La pregunta de investigación:**
+
+*¿Cómo ha evolucionado la aceptación de la justicia de mercado en la atención de salud en Chile entre 1999 y 2019, y qué papel juegan la percepción de privilegio, la necesidad, la brecha salarial percibida y la posición socioeconómica en explicar esa evolución?*
+
+En cuanto a los objetivos de esta investigación:
+
+**Objetivo general**
+
+Analizar la evolución de la aceptación de la justicia de mercado en la atención de salud en Chile entre 1999 y 2019, examinando el rol de la percepción de privilegio, la necesidad, la brecha salarial percibida y la posición socioeconómica como factores explicativos.
+
+**Objetivos específicos**
+
+1. **Describir** cómo ha cambiado la distribución de la aceptación de la desigualdad en la atención de salud en Chile a lo largo de las tres olas (1999, 2009, 2019).
+2. **Examinar** la relación entre la percepción de privilegio y la aceptación de la justicia de mercado en la atención de salud en cada período.
+3. **Analizar** en qué medida el criterio de necesidad se asocia con la aceptación de la justicia de mercado en la atención de salud en las distintas olas.
+4. **Examinar** la relación entre la brecha salarial percibia y la aceptación de la justicia de mercado en la atención de salud en cada periodo.
+5. **Analizar** en qué medida la posición socioeconómica se asocia con la aceptación de la desigualdad en la atención de salud según su periodo
+6. **Evaluar** si la relación entre los factores explicativos y la aceptación de la desigualdad en atención de salud varía según el período histórico considerado.
+
+## Antecedentes
+
+### Market Justice Health Care
+
+La justicia de mercado se define como un principio normativo que legitima la distribución de servicios esenciales, como la salud, en función del mérito individual y la capacidad de pago, asumiendo al mercado como un espacio neutral en contraposición a la "justicia política" orientada por la igualdad ciudadana y la necesidad social (@castillo_perceptions_2025; @lindh_just_2017). La aceptación ciudadana de este principio está fuertemente determinada por el diseño institucional a nivel macroestructural (@immergut_unfair_2020). En sistemas sanitarios con alta dependencia del financiamiento privado y fuertes barreras de costo, la desigualdad tiende a naturalizarse como un "estándar existencial", disminuyendo la percepción de injusticia frente al hecho de que los sectores de mayores ingresos compren tratamientos superiores (@immergut_unfair_2020). En estos escenarios, la consolidación de alternativas privadas fomenta que las clases medias y altas abandonen el apoyo a los sistemas universales para asegurar su propio acceso excluyente, elevando el respaldo general a las lógicas de privatización (@busemeyer_welfare_2020; @lindh_just_2017).
+
+A nivel microindividual, el apoyo a la justicia de mercado está condicionado por la posición socioeconómica y los marcos de creencias normativas (@castillo_perceptions_2025). Las personas en posiciones ventajosas muestran sistemáticamente un mayor respaldo a la asignación mediante el mercado para defender sus privilegios materiales e intereses de clase (@castillo_justification_2026; @lindh_just_2017). Sin embargo, la legitimidad del modelo decae cuando los individuos perciben que la brecha de desigualdad económica es excesiva, especialmente en dimensiones clave como la salud y la educación, las cuales generan una intolerancia significativamente mayor que las simples disparidades salariales (@castillo_perceptions_2025; @soler-martinez_income_2025). Pese a ello, esta visión crítica es fuertemente contrarrestada por la ideología meritocrática: quienes creen firmemente que la sociedad premia el esfuerzo personal son propensos a justificar el acceso desigual a la salud, interpretando las ventajas sanitarias exclusivas como una recompensa moralmente merecida por el éxito económico individual (@castillo_perceptions_2025; @castillo_justification_2026).
+
+
+### Factores asociados
+
+El ideal meritocrático ha operado históricamente como un principio normativo central para legitimar las desigualdades, asumiendo que el éxito económico y las ventajas sociales son el resultado justo del esfuerzo y el talento individual (@fehr_misperceiving_2025; @friedman_meaning_2024). Sin embargo, la legitimidad de este discurso se fractura cuando se introduce en la ecuación la percepción del privilegio y la conciencia de los factores estructurales. La evidencia empírica demuestra que cuando las ventajas económicas y el éxito se atribuyen a factores de origen —como la herencia familiar, las circunstancias externas o el simple azar— en lugar del mérito personal, la justificación moral de la desigualdad disminuye de manera sustancial (@fehr_misperceiving_2025; @sachweh_deserving_2025). En este sentido, el reconocimiento de que el acceso a un bienestar superior obedece a un origen social privilegiado revela las fallas estructurales de un sistema que asume erróneamente al mercado como una arena neutral, operando como un contrapeso crítico a la narrativa de la meritocracia (@sachweh_deserving_2025).
+
+La evaluación ciudadana sobre estas asimetrías no solo juzga la legitimidad de la riqueza, sino también quién es digno de recibir protección social, un proceso estructurado mediante juicios de merecimiento (deservingness) (@kootstra_deserving_2016; @vanoorschot_social_2017). El modelo CARIN establece los criterios centrales para entender estas dinámicas, entre los cuales el control sobre la situación de necesidad es fundamental: los individuos son considerados menos merecedores de ayuda estatal si se les percibe como personalmente responsables de su propia precariedad (@kootstra_deserving_2016; @vanoorschot_social_2017). No obstante, este mismo marco permite relevar el criterio de la necesidad. Bajo este parámetro normativo, las personas que exhiben mayores niveles de urgencia objetiva o carencia material son consideradas inherentemente más merecedoras de apoyo y solidaridad colectiva (@kootstra_deserving_2016; @vanoorschot_social_2017). De este modo, el principio de la necesidad se erige como un fundamento básico de la justicia distributiva enfocado en aliviar las carencias humanas, operando mediante una lógica de asignación opuesta a la exclusión por capacidad de pago propia del mercado (@vanhootegem_differentiated_2020).
+
+La evaluación subjetiva de las brechas de desigualdad es fundamental para legitimar o rechazar la justicia de mercado. Cuando los individuos perciben que la magnitud de la desigualdad es excesiva, su apoyo a que el acceso a servicios esenciales dependa de la capacidad de pago disminuye significativamente (@castillo_perceptions_2025). Esta postura crítica se intensifica al evaluar asimetrías en dimensiones vitales como la salud y la educación, las cuales generan una intolerancia mucho mayor y movilizan más respaldo a políticas redistributivas que las simples diferencias salariales (@soler-martinez_income_2025). En consecuencia, una conciencia aguda de estas disparidades erosiona la eficacia de los discursos meritocráticos, evidenciando que las ventajas acumuladas responden más a privilegios estructurales que al esfuerzo personal (@sachweh_deserving_2025).
+
+A su vez, las reacciones frente a estas brechas están fuertemente moduladas por factores socioeconómicos, donde la evaluación subjetiva del estatus y la tensión financiera suelen ser mejores predictores que la posición objetiva de clase (@castillo_justification_2026). Mientras los grupos de altos ingresos respaldan las lógicas de mercado usando narrativas meritocráticas para justificar éticamente sus ventajas (@castillo_perceptions_2025; @fehr_misperceiving_2025), en sistemas altamente privatizados ocurre un fenómeno de "neutralización de clase". Esta arquitectura institucional individualiza las responsabilidades, impidiendo que la vulnerabilidad de los sectores desfavorecidos se traduzca automáticamente en un rechazo frontal a la mercantilización (@castillo_justification_2026). Pese a ello, quienes experimentan carencias materiales reales tienden a rechazar con mayor fuerza la exclusión generada por el mercado (@castillo_justification_2026).
+
+**Diagrama de Hipótesis**
+
+![](input\files\diagrama.png){fig-align="center" width="350mm"}
+
+**H1: A mayor percepción de privilegio, menor preferencia por justicia de mercado en salud**
+
+**H2: A mayor creencia en el criterio de necesidad, menor será la preferencia por la justicia de mercado en salud**
+
+**H3: A mayor percepción de brecha salarial, menor preferencia por justicia de mercado en salud**
+
+**H4: A mayor posición socioeconómica, menor preferencia por justicia de mercado en salud**
+
+## Metodología
+
+Para ver una resumen de las variables ir a [Tabla Variables](#sec-tabla-variables).
+
+# Procesamiento de datos
+
+## Librerías y configuraciones iniciales
+```{r packages}
+#| warning: false
+#| output: false
+
+library(pacman)
+
+pacman::p_load(haven, tidyverse, dplyr, car, recode, sjlabelled, summarytools, sjmisc, sjPlot, ggplot2, knitr, kableExtra, webshot2)
+
+
+options(scipen = 999) 
+rm(list = ls())       
+
+```
+
+## Cargar bases de la ISSP
+```{r bbdd}
+
+issp99<-read_dta("input/data/issp1999.dta")
+issp09<-read_dta("input/data/issp2009.dta")
+issp19<-read_dta("input/data/issp2019.dta")
+
+```
+
+## Procesamiento ISSP 1999
+```{r proc-1999}
+
+issp99_r <- issp99 |> 
+  filter(v3==30) |> 
+  select(
+    v39,             # VD: market justice salud
+    v4, v5,          # percepción privilegio: familia rica, contactos
+    v53,             # Criterio de necesidad: tener hijos
+    v21, v16,        # ingresos percibidos: obrero y gerente (brutos)
+    x_degr,          # educación 
+    v46,             # estatus social subjetivo
+    sex, age,        # sexo, edad
+    income,          # ingreso familiar
+    hompop,          # cantidad de personas en el hogar
+    party_lr         # posición política
+  )
+
+view_df(issp99_r, max.len = 100)
+
+```
+
+### Tratamiento: market justice salud   
+
+```{r 99-mjs}
+
+descr(issp99_r$v39)
+frq(issp99_r$v39) 
+
+issp99_r <- issp99_r |> 
+  mutate(
+    mjs = car::recode(v39, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    mjs = set_labels(mjs, labels = c(
+      "Muy en desacuerdo" = 1,
+      "En desacuerdo" = 2,
+      "Ni de acuerdo ni en desacuerdo" = 3,
+      "De acuerdo" = 4,
+      "Muy de acuerdo" = 5
+    ))
+  ) |> 
+  var_labels(mjs = "Preferencia por justicia de mercado en salud")
+
+descr(issp99_r$mjs)
+frq(issp99_r$mjs) 
+
+```
+
+### Tratamiento: Percepción de privilegio
+``` {r 99-privilege}
+
+frq(issp99_r$v4) 
+frq(issp99_r$v5) 
+
+# Tratamiendo de V4
+issp99_r <- issp99_r |> 
+  mutate(
+    v4_r = car::recode(v4, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    v4_r = set_labels(v4_r, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(v4_r = "Importancia de provenir de una familia rica para surgir en la vida")
+
+# Tratamiendo de V5
+issp99_r <- issp99_r |> 
+  mutate(
+    v5_r = car::recode(v5, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    v5_r = set_labels(v5_r, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(v5_r = "Importancia de tener contactos para surgir en la vida")
+
+frq(issp99_r$v4_r) 
+frq(issp99_r$v5_r) 
+
+# Crear índice de privilegio
+issp99_r <- issp99_r |> 
+  mutate(
+    privilege = v4_r + v5_r,
+    privilege = privilege - 1
+  ) |> 
+  var_labels(
+    privilege = "Percepción de Privilegio"
+  )
+
+descr(issp99_r$privilege)
+frq(issp99_r$privilege)
+
+```
+
+### Tratamiento: Criterio de necesidad
+
+```{r 99-necessity}
+
+descr(issp99_r$v53)
+frq(issp99_r$v53)
+
+issp99_r <- issp99_r |> 
+  mutate(
+    necessity = car::recode(v53, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    necessity = set_labels(necessity, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(necessity = "Importancia de tener hijos que mantener para decidirse la remuneración")
+
+descr(issp99_r$necessity)
+frq(issp99_r$necessity)
+
+```
+
+### Tratamiento: Brecha salarial percibida
+
+```{r 99-lngap_perc}
+
+# Visualizar ingreso obrero
+frq(issp99_r$v21)
+summary(issp99_r$v21)
+
+# Visualizar ingreso gerente
+frq(issp99_r$v16)
+summary(issp99_r$v16)
+
+# Crear gap
+issp99_r <- issp99_r |> 
+  mutate(
+    inc_obrero = if_else(v21 > 40000 & v21 < 1000000, v21, NA_real_),
+    inc_gerente = if_else(v16 > 250000 & v16 < 100000001, v16, NA_real_),
+  
+    gap_perc   = inc_gerente / inc_obrero,
+    lngap_perc = log(gap_perc)
+  )|> 
+  var_labels(lngap_perc = "Brecha salarial percibida (logaritmo)")
+
+
+# Visualizar ingreso gap
+frq(issp99_r$lngap_perc)
+summary(issp99_r$lngap_perc)
+
+```
+
+### Tratamiento: Perfil socioeconómico
+
+```{r 99-perfil_soc}
+
+# 1. Educación
+
+frq(issp99_r$x_degr)
+
+issp99_r <- issp99_r |> 
+  mutate(
+    educ = case_when(
+      x_degr >= 3001 & x_degr <= 3006 ~ 0, 
+      x_degr >= 3007 & x_degr <= 3008 ~ 1, 
+      TRUE                           ~ NA_real_ 
+    )
+  ) |> 
+  sjlabelled::var_labels(
+    educ  = "Nivel educacional (Dicotómica: Universitario)"
+  ) |> 
+  set_labels( educ, labels = c(
+    "No universitario" = 0,
+    "Universitario" = 1)
+  )
+
+frq(issp99_r$educ)
+
+# 2. Estatus social subjetivo
+
+frq(issp99_r$v46)
+
+issp99_r <- issp99_r |> 
+  mutate(
+    ess = case_when(v46 >= 97 ~ NA_real_, TRUE ~ as.numeric(v46)       
+    ),
+    ess = rec(ess, rec = "rev")
+  ) |> 
+  var_labels(
+    ess = "Estatus social subjetivo"
+  )
+
+frq(issp99_r$ess)
+
+# 3. Sexo
+
+sjmisc::frq(issp99_r$sex)
+
+issp99_r <- issp99_r |> 
+  mutate(
+    sex = set_labels(sex, labels = c(
+      "Hombre" = 1,
+      "Mujer" = 2)
+  )
+)
+
+frq(issp99_r$sex)
+
+# 4. Edad
+
+issp99_r <- issp99_r |> 
+  mutate(
+    edad = case_when(
+      age<= 29 ~ "Jovenes",
+      age>= 30 & age <= 59 ~ "Adultos",
+      age >= 60 ~ "Adultos mayores")
+  ) |> 
+   var_labels(
+    edad = "Edad (tramos)"
+  )
+
+frq(issp99_r$edad)
+
+```
+
+### Tratamiento: Ingresos
+
+```{r 99-ing_pcap}
+
+# Tratamiento de ingreso total del hogar (en tramos)
+sjmisc::frq(issp99_r$income,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+issp99_r <- issp99_r |> 
+  mutate(
+    income_r = case_when(
+      income >= 999997 ~ NA_real_, 
+      TRUE             ~ as.numeric(income)
+    )
+  )
+
+sjmisc::frq(issp99_r$income_r,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+# Sacar media del tramo
+issp99_r <- issp99_r |> 
+  mutate(income_med = case_when(
+    income_r == 1  ~ 90000,                   
+    income_r == 2  ~ (91000  + 120000) / 2,   
+    income_r == 3  ~ (121000 + 150000) / 2,   
+    income_r == 4  ~ (151000 + 180000) / 2,   
+    income_r == 5  ~ (181000 + 210000) / 2,   
+    income_r == 6  ~ (211000 + 240000) / 2,   
+    income_r == 7  ~ (241000 + 290000) / 2,   
+    income_r == 8  ~ (291000 + 390000) / 2,  
+    income_r == 9  ~ (391000 + 600000) / 2,   
+    income_r == 10 ~ (601000 + 1000000) / 2,  
+    income_r == 11 ~ (1000001 + 1500000) / 2, 
+    income_r == 12 ~ (1500001 + 2000000) / 2, 
+    income_r == 13 ~ (2000001 + 3000000) / 2, 
+    income_r == 14 ~ 3000000,                 
+    TRUE           ~ NA_real_                 
+  ))
+
+# Per cápita
+
+issp99_r <- issp99_r |> 
+  mutate(ing_pcap = income_med / hompop,
+         ing_pcap = sjlabelled::set_label(ing_pcap, label = "Ingreso per cápita"))
+
+# Visualizar ingresos per cápita
+sjmisc::descr(issp99_r$ing_pcap, 
+              show = c("label", "n", "NA.prc", "mean", "md")) |> 
+  knitr::kable(digits = 0)
+
+sjmisc::frq(issp99_r$ing_pcap,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+
+```
+
+### Tratamiento: Año
+
+```{r 99-year}
+
+issp99_r <- issp99_r |> 
+  mutate(year = 1999)
+
+issp99_r$year <- sjlabelled::set_label(issp99_r$year, label = "Año de la encuesta")
+
+frq(issp99_r$year)
+
+```
+
+### Visualizar NA y Guardar
+
+```{r 99-save}
+
+# Visualizar NA
+sum(is.na(issp99_r))
+colSums(is.na(issp99_r)) #La mayor pérdida de casos se debe a el ingreso percibido de los gerentes
+na_issp99 <- na.omit(issp99_r) 
+
+# Guardar BBDD
+
+save(issp99_r,file = here::here("input/data/proc/data99.RData"))
+
+```
+
+
+## Procesamiento ISSP 2009
+```{r proc-2009}
+
+issp09_r <- issp09 |> 
+  filter(V4==152) |> 
+  select(
+    V38,             # VD: market justice salud
+    V6, V11,         # percepción privilegio: familia rica, contactos
+    V50,             # Criterio de necesidad: tener hijos
+    V25, V23,        # ingresos percibidos: obrero y gerente (brutos)
+    CL_DEGR,         # educación 
+    V44,             # estatus social subjetivo
+    SEX, AGE,        # sexo, edad
+    CL_INC,          # ingreso familiar
+    HOMPOP,          # cantidad de personas en el hogar
+    CL_PRTY,         # posición política
+  )
+
+view_df(issp09_r, max.len = 100)
+
+```
+
+### Tratamiento: Market justice salud   
+
+```{r 09-mjs}
+
+sjmisc::frq(issp09_r$V38,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+
+issp09_r <- issp09_r |> 
+  mutate(
+    mjs = car::recode(V38, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    mjs = set_labels(mjs, labels = c(
+      "Muy en desacuerdo" = 1,
+      "En desacuerdo" = 2,
+      "Ni de acuerdo ni en desacuerdo" = 3,
+      "De acuerdo" = 4,
+      "Muy de acuerdo" = 5
+    ))
+  ) |> 
+  var_labels(mjs = "Preferencia por justicia de mercado en salud")
+
+sjmisc::frq(issp09_r$mjs,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+```
+
+
+### Tratamiento: Percepción de privilegio
+``` {r 09-privilege}
+
+frq(issp09_r$V6) 
+frq(issp09_r$V11) 
+
+# Tratamiendo de V6
+issp09_r <- issp09_r |> 
+  mutate(
+    v6_r = car::recode(V6, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    v6_r = set_labels(v6_r, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(v6_r = "Importancia de provenir de una familia rica para surgir en la vida")
+
+# Tratamiendo de V11
+issp09_r <- issp09_r |> 
+  mutate(
+    v11_r = car::recode(V11, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    v11_r = set_labels(v11_r, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(v11_r = "Importancia de tener contactos para surgir en la vida")
+
+frq(issp09_r$v6_r) 
+frq(issp09_r$v11_r) 
+
+# Crear índice de privilegio
+issp09_r <- issp09_r |> 
+  mutate(
+    privilege = v6_r + v11_r,
+    privilege = privilege - 1
+  ) |> 
+  var_labels(
+    privilege = "Percepción de Privilegio"
+  )
+
+descr(issp09_r$privilege)
+frq(issp09_r$privilege)
+
+```
+
+### Tratamiento: Criterio de necesidad
+
+```{r 09-necessity}
+
+descr(issp09_r$V50)
+frq(issp09_r$V50)
+
+issp09_r <- issp09_r |> 
+  mutate(
+    necessity = car::recode(V50, "1=5; 2=4; 3=3; 4=2; 5=1; c(8,9)=NA", as.numeric = TRUE),
+    necessity = set_labels(necessity, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(necessity = "Importancia de tener hijos que mantener para decidirse la remuneración")
+
+descr(issp09_r$necessity)
+frq(issp09_r$necessity)
+
+```
+
+### Tratamiento: Brecha salarial percibida
+
+```{r 09-lngap_perc}
+
+# Visualizar ingreso obrero
+frq(issp09_r$V25)
+summary(issp09_r$V25)
+
+# Visualizar ingreso gerente
+frq(issp09_r$V23)
+summary(issp09_r$V23)
+
+# Crear gap
+issp09_r <- issp09_r |> 
+  mutate(
+    inc_obrero = if_else(V25 > 40000 & V25 < 1000000, V25, NA_real_),
+    inc_gerente = if_else(V23 > 250000 & V23 < 100000001, V23, NA_real_),
+  
+    gap_perc   = inc_gerente / inc_obrero,
+    lngap_perc = log(gap_perc)
+  ) |> 
+  var_labels(lngap_perc = "Brecha salarial percibida (logaritmo)")
+
+
+# Visualizar ingreso gap
+frq(issp09_r$lngap_perc)
+summary(issp09_r$lngap_perc)
+
+```
+
+### Tratamiento: Perfil socioeconómico
+
+```{r 09-perfil_soc}
+
+# 1. Educación
+
+frq(issp09_r$CL_DEGR)
+
+issp09_r <- issp09_r |> 
+  mutate(
+    educ = case_when(
+      CL_DEGR == 7 ~ 1, 
+      CL_DEGR >= 1 & CL_DEGR <= 9 ~ 0, 
+      TRUE                        ~ NA_real_ 
+    )
+  ) |> 
+  sjlabelled::var_labels(
+    educ = "Nivel educacional (Dicotómica: Universitario)"
+  ) |> 
+  sjlabelled::set_labels(educ, labels = c(
+    "No universitario" = 0,
+    "Universitario" = 1
+  ))
+
+frq(issp09_r$educ)
+
+# 2. Estatus social subjetivo
+
+frq(issp09_r$V44)
+
+issp09_r <- issp09_r |> 
+  mutate(
+    ess = case_when(V44 >= 97 ~ NA_real_, TRUE ~ as.numeric(V44)       
+    )
+  ) |> 
+  var_labels(
+    ess = "Estatus social subjetivo"
+  )
+
+frq(issp09_r$ess)
+
+# 3. Sexo
+
+sjmisc::frq(issp09_r$SEX)
+
+issp09_r <- issp09_r |> 
+  mutate(
+    sex = set_labels(SEX, labels = c(
+      "Hombre" = 1,
+      "Mujer" = 2)
+  )
+)
+
+frq(issp09_r$sex)
+
+# 4. Edad
+
+issp09_r <- issp09_r |> 
+  mutate(
+    edad = case_when(
+      AGE<= 29 ~ "Jovenes",
+      AGE>= 30 & AGE <= 59 ~ "Adultos",
+      AGE >= 60 ~ "Adultos mayores")
+  ) |> 
+   var_labels(
+    edad = "Edad (tramos)"
+  )
+
+frq(issp09_r$edad)
+
+```
+
+### Tratamiento: Ingresos
+
+```{r 09-ing_pcap}
+
+# Tratamiento de ingreso total del hogar (en tramos)
+sjmisc::frq(issp09_r$CL_INC,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+issp09_r <- issp09_r |> 
+  mutate(
+    income_r = case_when(
+      CL_INC >= 9999990 ~ NA_real_, 
+      TRUE             ~ as.numeric(CL_INC)
+    )
+  )
+
+sjmisc::frq(issp09_r$income_r,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+# Per cápita
+
+issp09_r <- issp09_r |> 
+  mutate(ing_pcap = income_r / HOMPOP,
+         ing_pcap = sjlabelled::set_label(ing_pcap, label = "Ingreso per cápita"))
+
+# Visualizar ingresos per cápita
+sjmisc::descr(issp09_r$ing_pcap, 
+              show = c("label", "n", "NA.prc", "mean", "md")) |> 
+  knitr::kable(digits = 0)
+
+sjmisc::frq(issp09_r$ing_pcap,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+
+
+```
+
+### Tratamiento: Año
+
+```{r 09-year}
+
+issp09_r <- issp09_r |> 
+  mutate(year = 2009)
+
+issp09_r$year <- sjlabelled::set_label(issp09_r$year, label = "Año de la encuesta")
+
+frq(issp09_r$year)
+
+```
+
+### Visualizar NA y Guardar
+
+```{r 09-save}
+
+# Visualizar NA
+sum(is.na(issp09_r))
+colSums(is.na(issp09_r)) #La mayor pérdida de casos se debe a el ingreso total del hogar
+na_issp09 <- na.omit(issp09_r) 
+
+# Guardar BBDD
+
+save(issp09_r,file = here::here("input/data/proc/data09.RData"))
+
+```
+
+
+## Procesamiento ISSP 2019
+```{r proc-2019}
+
+issp19_r <- issp19 |> 
+  filter(country==152) |> 
+  select(
+    v30,             # VD: market justice salud
+    v1, v5,          # percepción privilegio: familia rica, contactos
+    v46,             # Criterio de necesidad: tener hijos
+    v14, v12,        # ingresos percibidos: obrero y gerente (brutos)
+    CL_DEGR,         # educación 
+    TOPBOT,          # estatus social subjetivo
+    SEX, AGE,        # sexo, edad
+    CL_INC,          # ingreso familiar
+    HOMPOP,          # cantidad de personas en el hogar
+    CL_PRTY,         # posición política
+  )
+
+view_df(issp19_r, max.len = 100)
+
+```
+
+### Tratamiento: Market justice salud   
+
+```{r 19-mjs}
+
+sjmisc::frq(issp19_r$v30,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+
+issp19_r <- issp19_r |> 
+  mutate(
+    mjs = car::recode(v30, "1=5; 2=4; 3=3; 4=2; 5=1; c(-8,-9)=NA", as.numeric = TRUE),
+    mjs = set_labels(mjs, labels = c(
+      "Muy en desacuerdo" = 1,
+      "En desacuerdo" = 2,
+      "Ni de acuerdo ni en desacuerdo" = 3,
+      "De acuerdo" = 4,
+      "Muy de acuerdo" = 5
+    ))
+  ) |> 
+  var_labels(mjs = "Preferencia por justicia de mercado en salud")
+
+sjmisc::frq(issp19_r$mjs,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+```
+
+
+### Tratamiento: Percepción de privilegio
+``` {r 19-privilege}
+
+frq(issp19_r$v1) 
+frq(issp19_r$v5) 
+
+# Tratamiendo de v1
+issp19_r <- issp19_r |> 
+  mutate(
+    v1_r = car::recode(v1, "1=5; 2=4; 3=3; 4=2; 5=1; c(-8,-9)=NA", as.numeric = TRUE),
+    v1_r = set_labels(v1_r, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(v1_r = "Importancia de provenir de una familia rica para surgir en la vida")
+
+# Tratamiendo de v5
+issp19_r <- issp19_r |> 
+  mutate(
+    v5_r = car::recode(v5, "1=5; 2=4; 3=3; 4=2; 5=1; c(-8,-9)=NA", as.numeric = TRUE),
+    v5_r = set_labels(v5_r, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(v5_r = "Importancia de tener contactos para surgir en la vida")
+
+frq(issp19_r$v1_r) 
+frq(issp19_r$v5_r) 
+
+# Crear índice de privilegio
+issp19_r <- issp19_r |> 
+  mutate(
+    privilege = v1_r + v5_r,
+    privilege = privilege - 1
+  ) |> 
+  var_labels(
+    privilege = "Percepción de Privilegio"
+  )
+
+descr(issp19_r$privilege)
+frq(issp19_r$privilege)
+
+```
+
+### Tratamiento: Criterio de necesidad
+
+```{r 19-necessity}
+
+descr(issp19_r$v46)
+frq(issp19_r$v46)
+
+issp19_r <- issp19_r |> 
+  mutate(
+    necessity = car::recode(v46, "1=5; 2=4; 3=3; 4=2; 5=1; c(-1,-8,-9)=NA", as.numeric = TRUE),
+    necessity = set_labels(necessity, labels = c(
+      "No tiene importancia alguna" = 1,
+      "No es muy importante" = 2,
+      "Algo importante" = 3,
+      "Muy importante" = 4,
+      "Esencial" = 5
+    ))
+  ) |> 
+  var_labels(necessity = "Importancia de tener hijos que mantener para decidirse la remuneración")
+
+descr(issp19_r$necessity)
+frq(issp19_r$necessity)
+
+```
+
+### Tratamiento: Brecha salarial percibida
+
+```{r 19-lngap_perc}
+
+# Visualizar ingreso obrero
+frq(issp19_r$v14)
+summary(issp19_r$v14)
+
+# Visualizar ingreso gerente
+frq(issp19_r$v12)
+summary(issp19_r$v12)
+
+
+issp19_r <- issp19_r |> 
+  mutate(
+    v14_r = if_else(v14 < 0, NA_real_, v14),
+    v12_r = if_else(v12 < 0, NA_real_, v12),
+    
+    inc_obrero = if_else(v14_r > 40000 & v14_r < 1000000, v14_r, NA_real_),
+    inc_gerente = if_else(v12_r > 250000 & v12_r < 100000001, v12_r, NA_real_),
+  
+    # 3. Calcular el gap y el logaritmo
+    gap_perc   = inc_gerente / inc_obrero,
+    lngap_perc = log(gap_perc)
+  ) |> 
+  var_labels(lngap_perc = "Brecha salarial percibida (logaritmo)")
+
+
+# Visualizar ingreso gap
+frq(issp19_r$lngap_perc)
+summary(issp19_r$lngap_perc)
+
+```
+
+### Tratamiento: Perfil socioeconómico
+
+```{r 19-perfil_soc}
+
+# 1. Educación
+
+frq(issp19_r$CL_DEGR)
+
+issp19_r <- issp19_r |> 
+  mutate(educ = case_when(
+    CL_DEGR %in% c(-2, -9) ~ NA_real_,       
+    CL_DEGR >= 9           ~ 1,              
+    CL_DEGR >= 1 & CL_DEGR <= 8 ~ 0,         
+    TRUE                   ~ NA_real_        
+  )) |> 
+  sjlabelled::var_labels(
+    educ = "Nivel educacional (Dicotómica: Universitario)"
+  ) |> 
+  sjlabelled::set_labels(educ, labels = c(
+    "No universitario" = 0,
+    "Universitario" = 1
+  ))
+
+frq(issp19_r$educ)
+
+# 2. Estatus social subjetivo
+
+frq(issp19_r$TOPBOT)
+
+issp19_r <- issp19_r |> 
+  mutate(
+    ess = case_when(TOPBOT < 0 ~ NA_real_, TRUE ~ as.numeric(TOPBOT)       
+    )
+  ) |> 
+  var_labels(
+    ess = "Estatus social subjetivo"
+  )
+
+frq(issp19_r$ess)
+
+# 3. Sexo
+
+sjmisc::frq(issp19_r$SEX)
+
+issp19_r <- issp19_r |> 
+  mutate(
+    sex = set_labels(SEX, labels = c(
+      "Hombre" = 1,
+      "Mujer" = 2)
+  )
+)
+
+frq(issp19_r$sex)
+
+# 4. Edad
+
+issp19_r <- issp19_r |> 
+  mutate(
+    edad = case_when(
+      AGE<= 29 ~ "Jovenes",
+      AGE>= 30 & AGE <= 59 ~ "Adultos",
+      AGE >= 60 ~ "Adultos mayores")
+  ) |> 
+   var_labels(
+    edad = "Edad (tramos)"
+  )
+
+frq(issp19_r$edad)
+
+```
+
+### Tratamiento: Ingresos
+
+```{r 19-ing_pcap}
+
+# Tratamiento de ingreso total del hogar (en tramos)
+sjmisc::frq(issp19_r$CL_INC,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+issp19_r <- issp19_r |> 
+  mutate(
+    income_r = case_when(
+      CL_INC < 0 ~ NA_real_, 
+      TRUE             ~ as.numeric(CL_INC)
+    )
+  )
+
+sjmisc::frq(issp19_r$income_r,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+# Per cápita
+
+issp19_r <- issp19_r |> 
+  mutate(ing_pcap = income_r / HOMPOP,
+         ing_pcap = sjlabelled::set_label(ing_pcap, label = "Ingreso per cápita"))
+
+# Visualizar ingresos per cápita
+sjmisc::descr(issp19_r$ing_pcap, 
+              show = c("label", "n", "NA.prc", "mean", "md")) |> 
+  knitr::kable(digits = 0)
+
+sjmisc::frq(issp19_r$ing_pcap,
+            out = "txt",
+            show.na = T) |> knitr::kable()
+
+
+
+```
+
+### Tratamiento: Año
+
+```{r 19-year}
+
+issp19_r <- issp19_r |> 
+  mutate(year = 2019)
+
+issp19_r$year <- sjlabelled::set_label(issp19_r$year, label = "Año de la encuesta")
+
+frq(issp19_r$year)
+
+```
+
+### Visualizar NA y Guardar
+
+```{r 19-save}
+
+# Visualizar NA
+sum(is.na(issp19_r))
+colSums(is.na(issp19_r)) #La mayor pérdida de casos se debe a el ingreso total del hogar
+na_issp19 <- na.omit(issp19_r) 
+
+# Guardar BBDD
+
+save(issp19_r,file = here::here("input/data/proc/data19.RData"))
+
+```
+
+## Merge de las BBDD
+
+
+```{r issp_t}
+
+# Combinar 
+issp_t <- bind_rows(issp99_r, issp09_r, issp19_r)
+
+save(issp_t,file = here::here("input/data/proc/data_t.RData"))
+
+
+# Combinar NA
+issp_na <- bind_rows(na_issp99, na_issp09, na_issp19)
+
+save(issp_na,file = here::here("input/data/proc/data_na.RData"))
+```
+
+## Tabla Variables {#sec-tabla-variables}
+```{r tabla-descriptivos}
+#| output: true
+#| echo: false
+
+# Función auxiliar para variables numéricas
+desc_num <- function(x, label) {
+  n_valid  <- sum(!is.na(x))
+  n_miss   <- sum(is.na(x))
+  n_total  <- length(x)
+  pct_v    <- round(n_valid / n_total * 100, 1)
+  pct_m    <- round(n_miss  / n_total * 100, 1)
+  n_dist   <- length(unique(na.omit(x)))
+  media    <- round(mean(x, na.rm = TRUE), 2)
+  de       <- round(sd(x, na.rm = TRUE), 2)
+  mediana  <- round(median(x, na.rm = TRUE), 2)
+  mn       <- round(min(x, na.rm = TRUE), 2)
+  mx       <- round(max(x, na.rm = TRUE), 2)
+  ri       <- round(IQR(x, na.rm = TRUE), 2)
+  cv       <- round(de / media, 2)
+
+  glue::glue(
+    "Media = {media} (DE = {de}); mediana = {mediana}; ",
+    "min/max = [{mn}, {mx}]; RI = {ri} (CV = {cv}); ",
+    "{n_dist} valores distintos; ",
+    "{n_valid} válidos ({pct_v} %) y {n_miss} perdidos ({pct_m} %)."
+  )
+}
+
+# Función auxiliar para variables binarias/categóricas
+desc_cat <- function(x, label) {
+  n_valid <- sum(!is.na(x))
+  n_miss  <- sum(is.na(x))
+  n_total <- length(x)
+  pct_v   <- round(n_valid / n_total * 100, 1)
+  pct_m   <- round(n_miss  / n_total * 100, 1)
+  media   <- round(mean(as.numeric(x), na.rm = TRUE), 1)
+
+  props <- table(x, useNA = "no")
+  prop_str <- paste(
+    names(props), "=", as.integer(props),
+    paste0("(", round(prop.table(props) * 100, 1), " %)"),
+    collapse = "; "
+  )
+
+  glue::glue(
+    "Proporciones: {prop_str}; ",
+    "media = {media}; ",
+    "{n_valid} válidos ({pct_v} %) y {n_miss} perdidos ({pct_m} %)."
+  )
+}
+
+# Construir tabla
+tabla_desc <- tibble(
+  Variable   = c("mjs", "privilege", "necessity", "lngap_perc",
+                 "educ", "ess", "sex", "edad", "ing_pcap"),
+  Tipo       = c("num.", "num.", "num.", "num.",
+                 "binaria", "num.", "binaria", "categórica", "num."),
+  Etiqueta   = c(
+    "Aceptación de la justicia de mercado en salud",
+    "Percepción de privilegio",
+    "Criterio de necesidad (tener hijos)",
+    "Brecha salarial percibida (logaritmo)",
+    "Nivel educacional (universitario = 1)",
+    "Estatus social subjetivo",
+    "Sexo (mujer = 1, hombre = 0)",
+    "Edad (tramos: jóvenes, adultos, adultos mayores)",
+    "Ingreso per cápita del hogar"
+  ),
+  `Resumen estadístico` = c(
+    desc_num(issp_t$mjs,         "mjs"),
+    desc_num(issp_t$privilege,   "privilege"),
+    desc_num(issp_t$necessity,   "necessity"),
+    desc_num(issp_t$lngap_perc,  "lngap_perc"),
+    desc_cat(issp_t$educ,        "educ"),
+    desc_num(issp_t$ess,         "ess"),
+    desc_cat(issp_t$sex,         "sex"),
+    desc_cat(issp_t$edad,        "edad"),
+    desc_num(issp_t$ing_pcap,    "ing_pcap")
+  )
+) |>
+  mutate(Variable = paste0(Variable, " (", Tipo, ")")) |>
+  select(Variable, Etiqueta, `Resumen estadístico`)
+
+# Renderizar
+tabla_desc <- kable(tabla_desc,
+      caption = "Tabla de descriptivos — muestra combinada (1999, 2009, 2019)",
+      align   = c("l", "l", "l")) |>
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = TRUE,
+                font_size  = 13) |>
+  column_spec(1, bold = TRUE, width = "15%") |>
+  column_spec(2, width = "25%") |>
+  column_spec(3, width = "60%")
+
+tabla_desc
+
+save_kable(tabla_desc, file = "tabla_descriptivos.png", zoom = 2)
+save_kable(tabla_desc, file = "tabla_descriptivos.html")
+
+```
+
+# Bibliografía
