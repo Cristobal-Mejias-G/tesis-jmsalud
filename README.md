@@ -22,6 +22,12 @@ La investigación analiza la evolución de las preferencias por la justicia de m
   </a>
 </p>
 
+<p align="left">
+  <a href="https://cristobal-mejias-g.github.io/thesis-market-justice-health-cl/st1_avance.html">
+    <strong> Ver Avance Seminario de Título 1 </strong>
+  </a>
+</p>
+
 ## Estructura del repositorio
 
 ```
