@@ -22,8 +22,8 @@ execute:
 include-in-header:
   text: |
     <style>p { text-align: justify; }</style>
-bibliography: thesis-mj-health-cl.bib
-csl: apa.csl
+bibliography: input/bib/thesis-mj-health-cl.bib
+csl: input/bib/apa.csl
 
 ---
 
@@ -102,7 +102,7 @@ Para ver una resumen de las variables ir a [Tabla Variables](#sec-tabla-variable
 
 library(pacman)
 
-pacman::p_load(haven, tidyverse, dplyr, car, recode, sjlabelled, summarytools, sjmisc, sjPlot, ggplot2, knitr, kableExtra, webshot2)
+pacman::p_load(haven, tidyverse, dplyr, car, recode, sjlabelled, summarytools, sjmisc, sjPlot, ggplot2, knitr, kableExtra, webshot2, gt)
 
 
 options(scipen = 999) 
@@ -1104,7 +1104,8 @@ desc_cat <- function(x, label) {
 }
 
 # Construir tabla
-tabla_desc <- tibble(
+
+tabla_base <- tibble(
   Variable   = c("mjs", "privilege", "necessity", "lngap_perc",
                  "educ", "ess", "sex", "edad", "ing_pcap"),
   Tipo       = c("num.", "num.", "num.", "num.",
@@ -1136,20 +1137,38 @@ tabla_desc <- tibble(
   select(Variable, Etiqueta, `Resumen estadístico`)
 
 # Renderizar
-tabla_desc <- kable(tabla_desc,
-      caption = "Tabla de descriptivos — muestra combinada (1999, 2009, 2019)",
-      align   = c("l", "l", "l")) |>
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
-                full_width = TRUE,
-                font_size  = 13) |>
-  column_spec(1, bold = TRUE, width = "15%") |>
-  column_spec(2, width = "25%") |>
-  column_spec(3, width = "60%")
 
-tabla_desc
+tabla_final_gt <- tabla_base |> 
+  gt() |> 
+  tab_header(
+    title = md("**Tabla de descriptivos: muestra combinada (1999, 2009, 2019)**")
+  ) |> 
+  cols_align(
+    align = "left",
+    columns = everything()
+  ) |> 
+  cols_width(
+    1 ~ pct(15),
+    2 ~ pct(25),
+    3 ~ pct(60)
+  ) |> 
+  tab_options(
+    table.font.size = px(13),
+    table.width = pct(100),
+    row.striping.include_table_body = TRUE
+  ) |> 
+  opt_row_striping(row_striping = TRUE) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(columns = 1)
+  )
 
-save_kable(tabla_desc, file = "tabla_descriptivos.png", zoom = 2)
-save_kable(tabla_desc, file = "tabla_descriptivos.html")
+tabla_final_gt
+
+# Guardar tabla
+
+tabla_final_gt %>%
+  gtsave("output/graf/tabla_descriptivos.html")
 
 ```
 
