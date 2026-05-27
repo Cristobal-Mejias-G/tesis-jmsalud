@@ -15,4 +15,7 @@ Agrupación de variables
 6. Percepciones, Creencias, **Identifiacaciones**
     1. ESS (+)
     2. Posición política [me falta]: izquierda (-)
+7. Tiempo: la diferencia en las preferencias por jmhc cambiará en el tiempo
+
+¿Juntar Cep?
 
