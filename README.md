@@ -15,13 +15,13 @@ Este repositorio contiene el código, datos procesados y documentos asociados a 
 
 
 <p align="left">
-  <a href="https://cristobal-mejias-g.github.io/thesis-market-justice-health-cl/expose.html">
+  <a href="https://cristobal-mejias-g.github.io/tesis-jmsalud/expose.html">
     <strong> Ver exposé </strong>
   </a>
 </p>
 
 <p align="left">
-  <a href="https://cristobal-mejias-g.github.io/thesis-market-justice-health-cl/st1_avance.html">
+  <a href="https://cristobal-mejias-g.github.io/tesis-jmsalud/st1_avance.html">
     <strong> Ver Avance Seminario de Título 1 </strong>
   </a>
 </p>
