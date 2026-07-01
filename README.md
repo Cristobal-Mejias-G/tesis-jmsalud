@@ -26,6 +26,12 @@ Este repositorio contiene el código, datos procesados y documentos asociados a 
   </a>
 </p>
 
+<p align="left">
+  <a href="https://cristobal-mejias-g.github.io/tesis-jmsalud/ST1_JMS.html">
+    <strong> Ver Seminario de Título 1 </strong>
+  </a>
+</p>
+
 
 ## Autor
 
